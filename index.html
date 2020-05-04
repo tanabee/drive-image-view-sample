@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base target="_top">
+  </head>
+  <body>
+    <img id="image" />
+    <script>
+      const img = document.getElementById('image')
+      const fileId = ''// TODO: insert value
+      const url = google.script.run
+        .withSuccessHandler(url => {
+          img.src = url
+        })
+        .withFailureHandler(console.error)
+        .getImageUrlById(fileId)
+    </script>
+  </body>
+</html>
